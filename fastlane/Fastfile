@@ -1,0 +1,76 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :build_ipa do
+   disable_automatic_code_signing(
+      path: "Kitsbee.xcodeproj"
+    )
+    build_ios_app(
+      scheme: "Kitsbee",
+      workspace: "Kitsbee.xcworkspace",
+      configuration: "Release", 
+      export_method: "enterprise",
+      output_directory: "./build/ipa",
+      silent: true,
+      clean: true,
+      skip_profile_detection: true,
+      export_options: {
+        provisioningProfiles: { "vn.viettel.test.dev": "All app" }
+      }
+    )
+  end 
+
+  lane :upload_firebase do
+    firebase_app_distribution(
+        firebase_cli_token: "1//0eeUhUO0f_SiKCgYIARAAGA4SNwF-L9IrD-ENKmZpc_nJ6WM0U_nwJifCQ35yuMHqbfYNHQzIuIR91jDmS-s-4qWV4SAe3t78m-Y",
+        app: "1:414083334483:ios:724e1b1450c9fd87e961a6",
+        testers: "thangtran480@gmail.com, thangtran4801@gmail.com",
+        release_notes: "iPad - product " + Time.new.to_s
+    )
+
+  end
+
+  lane :send_slack do
+    # 1
+    build_number = get_build_number
+
+    # 2
+    version_number = get_version_number
+    slack(
+      message: "App build complete for Version: #{version_number} (#{build_number})",
+      success: true,
+      payload: {
+        "Build Date" => Time.new.to_s,
+        "Built by" => 'fastlane'
+      },
+      slack_url: "https://hooks.slack.com/services/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"
+    )
+  end
+  lane :upload_diawi do
+    build_ipa
+    diawi(
+      token: "VKkyjwcLQ85a6bfe1OVSiiozyi3IOKlBFhiGheoQQB"
+    )
+  end
+
+  lane :build_firebase do
+    build_ipa
+    upload_firebase
+  end
+end
