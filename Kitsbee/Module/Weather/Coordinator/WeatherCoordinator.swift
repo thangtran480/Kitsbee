@@ -9,6 +9,8 @@ class WeatherCoordinator: BaseCoordinator {
     override func start() {
         super.start()
         let vc = WeatherVC()
+        let vm = WeatherVM(weatherService: WeatherService(), weatherCoordinator: self)
+        vc.viewModel = vm
         navigation.pushViewController(vc, animated: true)
     }
 }

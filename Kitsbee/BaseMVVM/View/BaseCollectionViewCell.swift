@@ -9,4 +9,7 @@ import UIKit
 
 class BaseCollectionViewCell: UICollectionViewCell {
     
+    func setViewModel(_ rowViewModel: RowViewModel){
+        
+    }
 }

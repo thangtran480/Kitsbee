@@ -7,6 +7,6 @@
 
 import UIKit
 
-class LoginService: BaseServiceRx {
+class LoginService {
     
 }
