@@ -4,7 +4,7 @@ xcode_workspace: Kitsbee.xcworkspace
 xcode_scheme: Kitsbee
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
 
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- gem update concurrent-ruby
-- pod setup
+install:
+  - bundle install
+script:
+  - fastlane build_ipa
