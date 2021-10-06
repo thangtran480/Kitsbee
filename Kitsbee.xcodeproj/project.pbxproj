@@ -45,7 +45,18 @@
 		79F73D73267898A300C72C3D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73D72267898A300C72C3D /* BaseCollectionViewCell.swift */; };
 		79F73D76267898B900C72C3D /* BaseServiceRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73D75267898B900C72C3D /* BaseServiceRx.swift */; };
 		79F73D7926789A7F00C72C3D /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F73D7826789A7F00C72C3D /* Loading.swift */; };
+		8B2DDD52270DB50F00F043CD /* KitsbeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DDD51270DB50F00F043CD /* KitsbeeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B2DDD54270DB50F00F043CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79A679632668652D00256D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79A6796A2668652D00256D59;
+			remoteInfo = Kitsbee;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		341759A1BAC69EBEF13B1621 /* Pods_Kitsbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitsbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +100,9 @@
 		79F73D72267898A300C72C3D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		79F73D75267898B900C72C3D /* BaseServiceRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceRx.swift; sourceTree = "<group>"; };
 		79F73D7826789A7F00C72C3D /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		8B2DDD4F270DB50F00F043CD /* KitsbeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitsbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2DDD51270DB50F00F043CD /* KitsbeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitsbeeTests.swift; sourceTree = "<group>"; };
+		8B2DDD53270DB50F00F043CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7512636CB6FA01387AFE7B0 /* Pods-Kitsbee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsbee.release.xcconfig"; path = "Target Support Files/Pods-Kitsbee/Pods-Kitsbee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +112,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				410D1127E0C0FEE6BAD8B607 /* Pods_Kitsbee.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2DDD4C270DB50F00F043CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				79A6796D2668652D00256D59 /* Kitsbee */,
+				8B2DDD50270DB50F00F043CD /* KitsbeeTests */,
 				79A6796C2668652D00256D59 /* Products */,
 				9A7ED96FF3543FA780D89391 /* Pods */,
 				B0571D32F41D2D38B31C0982 /* Frameworks */,
@@ -311,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				79A6796B2668652D00256D59 /* Kitsbee.app */,
+				8B2DDD4F270DB50F00F043CD /* KitsbeeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +422,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		8B2DDD50270DB50F00F043CD /* KitsbeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DDD51270DB50F00F043CD /* KitsbeeTests.swift */,
+				8B2DDD53270DB50F00F043CD /* Info.plist */,
+			);
+			path = KitsbeeTests;
+			sourceTree = "<group>";
+		};
 		9A7ED96FF3543FA780D89391 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,18 +470,40 @@
 			productReference = 79A6796B2668652D00256D59 /* Kitsbee.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8B2DDD4E270DB50F00F043CD /* KitsbeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2DDD58270DB50F00F043CD /* Build configuration list for PBXNativeTarget "KitsbeeTests" */;
+			buildPhases = (
+				8B2DDD4B270DB50F00F043CD /* Sources */,
+				8B2DDD4C270DB50F00F043CD /* Frameworks */,
+				8B2DDD4D270DB50F00F043CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B2DDD55270DB50F00F043CD /* PBXTargetDependency */,
+			);
+			name = KitsbeeTests;
+			productName = KitsbeeTests;
+			productReference = 8B2DDD4F270DB50F00F043CD /* KitsbeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		79A679632668652D00256D59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					79A6796A2668652D00256D59 = {
 						CreatedOnToolsVersion = 12.4;
 						ProvisioningStyle = Manual;
+					};
+					8B2DDD4E270DB50F00F043CD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 79A6796A2668652D00256D59;
 					};
 				};
 			};
@@ -467,6 +521,7 @@
 			projectRoot = "";
 			targets = (
 				79A6796A2668652D00256D59 /* Kitsbee */,
+				8B2DDD4E270DB50F00F043CD /* KitsbeeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -482,6 +537,13 @@
 				794F07012679A99400215BBB /* WeatherVC.xib in Resources */,
 				79A679782668652F00256D59 /* Assets.xcassets in Resources */,
 				79A679762668652D00256D59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2DDD4D270DB50F00F043CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +630,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B2DDD4B270DB50F00F043CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2DDD52270DB50F00F043CD /* KitsbeeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B2DDD55270DB50F00F043CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79A6796A2668652D00256D59 /* Kitsbee */;
+			targetProxy = 8B2DDD54270DB50F00F043CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		79A679742668652D00256D59 /* Main.storyboard */ = {
@@ -754,6 +832,48 @@
 			};
 			name = Release;
 		};
+		8B2DDD56270DB50F00F043CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3267Z52VP5;
+				INFOPLIST_FILE = KitsbeeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.viettel.KitsbeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitsbee.app/Kitsbee";
+			};
+			name = Debug;
+		};
+		8B2DDD57270DB50F00F043CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3267Z52VP5;
+				INFOPLIST_FILE = KitsbeeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vn.viettel.KitsbeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitsbee.app/Kitsbee";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -771,6 +891,15 @@
 			buildConfigurations = (
 				79A679802668652F00256D59 /* Debug */,
 				79A679812668652F00256D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2DDD58270DB50F00F043CD /* Build configuration list for PBXNativeTarget "KitsbeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2DDD56270DB50F00F043CD /* Debug */,
+				8B2DDD57270DB50F00F043CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
