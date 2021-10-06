@@ -3,6 +3,4 @@ osx_image: xcode12.5
 xcode_workspace: Kitsbee.xcworkspace
 xcode_scheme: Kitsbee
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
-before_install:
-  - bundle install
-  - bundle exec pod install --repo-update
+
